@@ -2,7 +2,7 @@ Para configurar el toolchain de compilación cruzada, el tipo de arquitectura
 de destino y el modelo de la RaspberryPi, usar el siguiente comando:
 
 ```
-./configure -r 3
+./configure -r 2
 ```
 Esto debe generar un archivo `Config.mk` con el siguiente contenido, que puede
 ser modificado según los requisitos:
