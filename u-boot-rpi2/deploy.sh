@@ -11,23 +11,25 @@ while true; do
     case $choice in
         1)
             # Montar la particion de la SD en una particion local
-            sudo mount /dev/sda1 /mnt/sdcard
+            #sudo mount /dev/sda1 /mnt/sdcard
+            sudo mount /dev/mmcblk0 /mnt/sdcard 
             # Eliminar el config.txt actual
             sudo rm /mnt/sdcard/config.txt
             # Copiar el config.txt de la carpeta bare-metal
-            sudo cp bare-metal/config.txt
+            sudo cp bare-metal/config.txt /mnt/sdcard
             # Desmontar la partición de la SD
-            sudo umount /dev/sdcard
+            sudo umount /mnt/sdcard
             ;;
         2)
             # Montar la particion de la SD en una particion local
-            sudo mount /dev/sda1 /mnt/sdcard
+            #sudo mount /dev/sda1 /mnt/sdcard
+            sudo mount /dev/mmcblk0 /mnt/sdcard 
             # Eliminar el config.txt actual
-            sudo rm /mnt/sdcard/config.txt
+            sudo rm /mnt/sdcard/config.txt 
             # Copiar el config.txt de la carpeta bare-metal
-            sudo cp u-boot/config.txt
+            sudo cp u-boot/config.txt /mnt/sdcard
             # Desmontar la partición de la SD
-            sudo umount /dev/sdcard
+            sudo umount /mnt/sdcard
             ;;
 
         [Ss])
