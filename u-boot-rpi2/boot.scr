@@ -1,0 +1,5 @@
+echo "Loading kernel..."
+fatload mmc 0:1 ${kernel_addr_r} kernel7.img
+echo "Booting kernel..."
+bootm ${kernel_addr_r} - ${fdt_addr}
+
